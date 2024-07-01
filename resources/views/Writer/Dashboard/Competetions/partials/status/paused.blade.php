@@ -1,0 +1,71 @@
+<div class="alert alert-danger text-center">
+    <div class="card bg-transparent">
+        <div class="card-body">
+            <h3>{{$competetion->name}} Information</h3>
+            <div class="row d-flex mt-5 mb-3">
+                <!--******************************-->
+                <!--******************************-->
+                <!--******************************-->
+                <div class="col-sm-12 col-lg-4 col-md-4">
+                    <h3><i class="fa-4x fa fa-hourglass-start"></i>
+                    </h3>
+                    <h4 class="card-title mt-4">
+                        Starting Date <strong>{{ date('d-M-Y',strtotime($competetion->starting_date)) }}</strong>
+                    </h4>
+                </div>
+                <!--******************************-->
+                <!--******************************-->
+                <!--******************************-->
+                <div class="col-sm-12 col-lg-4 col-md-4">
+                    <h3><i class="fa-4x fa fa-pause-circle"></i>
+                    </h3>
+                    <h4 class="card-title mt-4">
+                        <strong>
+                            {{__('PAUSED') }}
+                        </strong>
+                    </h4>
+                </div>
+                <!--******************************-->
+                <!--******************************-->
+                <!--******************************-->
+                <div class="col-sm-12 col-lg-4 col-md-4">
+                    <h3><i class="fa-4x fa fa-hourglass-start"></i>
+                    </h3>
+                    <h4 class="card-title mt-4">
+                        Ending Date <strong>{{ date('d-M-Y',strtotime($competetion->ending_date)) }}</strong>
+                    </h4>
+                </div>
+            </div>
+            <form method="post">
+                @csrf
+                <!--******************************-->
+                <!--******************************-->
+                <!--******************************-->
+                @if(Request::path() != "Writer/Dashboard")
+                <!--begin::Go To Dashboard Button-->
+                <a href="{{ route('WriterDashboard') }}" class="btn btn-info btn-rounded mt-2"><i class="fas fa-long-arrow-alt-left"></i> Go to Dashboard</a>
+                <!--end::Go To Dashboard Button-->
+                @endif
+                <!--******************************-->
+                <!--******************************-->
+                <!--******************************-->
+                @if(Request::path() != "Writer/Competetions")
+                <!--begin::View Competetions Button-->
+                <a href="{{ route('WriterCompetetions') }}" class="btn waves-effect waves-light btn-rounded btn-primary mt-2"><i class="fa fa-clock"></i> View Other Competetions</a>
+                <!--end::View Competetions Button-->
+                @endif
+                <!--******************************-->
+                <!--******************************-->
+                <!--******************************-->
+                @if(Request::path() == "Writer/Competetion/".$competetion->id."/GuideLines")
+                <!--begin::Go To Dashboard Button-->
+                <a href="{{ route('WriterJoinCompetetion',$competetion->id) }}" class="btn btn-info btn-rounded mt-2"><i class="fas fa-long-arrow-alt-left"></i> Go to Competetion</a>
+                <!--end::Go To Dashboard Button-->
+                @endif
+                <!--******************************-->
+                <!--******************************-->
+                <!--******************************-->
+            </form>
+        </div>
+    </div>
+</div>
