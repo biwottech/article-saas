@@ -1,0 +1,90 @@
+/* jQuery Countdown styles 2.0.0. */
+/*#countdown {
+    height: 50px;
+    font-size: 45px;
+    font-weight: 900;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}*/
+
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+#countdown {
+    font-family: 'Orbitron', sans-serif;
+    color: #2962FF;
+    font-size: 70px;
+    text-align: center;
+    padding-top: 40px;
+    font-weight: 900;
+}
+
+.is-countdown {
+    border: 1px solid #2962FF;
+    background-color: #2962FF;
+    font-weight: 950;
+}
+
+.countdown-rtl {
+    direction: rtl;
+}
+
+.countdown-holding span {
+    color: #888;
+}
+
+.countdown-row {
+    clear: both;
+    width: 100%;
+    padding: 0px 2px;
+    text-align: center;
+}
+
+.countdown-show1 .countdown-section {
+    width: 98%;
+}
+
+.countdown-show2 .countdown-section {
+    width: 48%;
+}
+
+.countdown-show3 .countdown-section {
+    width: 32.5%;
+}
+
+.countdown-show4 .countdown-section {
+    width: 24.5%;
+}
+
+.countdown-show5 .countdown-section {
+    width: 19.5%;
+}
+
+.countdown-show6 .countdown-section {
+    width: 16.25%;
+}
+
+.countdown-show7 .countdown-section {
+    width: 14%;
+}
+
+.countdown-section {
+    display: block;
+    float: left;
+    font-size: 75%;
+    text-align: center;
+}
+
+.countdown-amount {
+    font-size: 200%;
+}
+
+.countdown-period {
+    display: block;
+}
+
+.countdown-descr {
+    display: block;
+    width: 100%;
+}
